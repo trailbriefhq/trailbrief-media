@@ -1,6 +1,6 @@
 # Fact sheet: "Mt. Whitney's first recorded climb"
 
-- **Video:** `2026-11-29-whitney-first-climb.mp4` (42.5 s, 1080x1920, AI voice "Puck" via Speko, original music made in code)
+- **Video:** `2026-11-29-whitney-first-climb.mp4` (42.5 s, 1080x1920, AI voice "Puck" via Speko, original music made in code). Version 2 (Nov 23): real public-domain photos added; narration unchanged
 - **Planned post:** Sun Nov 29, 2026, 7:00 PM ET. Instagram Reels, TikTok, YouTube Shorts
 - **Facts checked:** Nov 23, 2026
 - **AI label:** yes on all three platforms (realistic AI voice)
@@ -20,6 +20,16 @@
 | 9 | Sept 1873: King reached the real summit about a month after them | Farquhar, "Whitney, Mount": King climbed the true Mount Whitney on Sept 19, 1873. NPS-hosted *Challenge of the Big Trees*: King reached Whitney's top only to find others had preceded him that summer. https://www.nps.gov/parkhistory/online_books/dilsaver-tweed/chap3d.htm |
 | 10 | Today you need a permit to stand on top, year-round | Recreation.gov, Mt. Whitney lottery page: a wilderness permit is required year-round to visit Mt. Whitney. https://www.recreation.gov/permits/445860 |
 | 11 | Illustration: King's peak (Langley) is south of and lower than Whitney | Farquhar (higher peak "to the north"); the drawing is stylized and shows no elevations |
+
+## Photos on screen (all public domain; credit shown on screen; details in library/CREDITS.md)
+| Scene | Photo | On-screen credit (copied from the NPS page title) |
+|---|---|---|
+| Hook | `whitney-from-mt-muir-1930.jpg` | Mt. Whitney from near Mt. Muir, 1930 · NPS archive |
+| 1864 | `whitney-dixon.jpg` | Mt. Whitney · NPS archive, Joseph Dixon |
+| Aug 18, 1873 | `whitney-from-south.jpg` (framed print) | Mt. Whitney from the south · NPS archive, Bill Jones |
+| Sept 1873 | `whitney-summit-shelter-1929.jpg` | Whitney's summit hut (built 1909), 1929 · NPS archive, John Diehl |
+| Today | `whitney-owens-valley-1963.jpg` | Mt. Whitney from Whitney Portal Road, 1963 · NPS archive, Richard McLaren |
+The 1871 and July 1873 scenes stay a drawn map (King's route, the higher peak to the north): an illustration, not a photo. Photo years are on screen so no photo reads as the year in the story.
 
 ## Wording choices (on purpose)
 - **"First recorded climb"**, not "first climb": earlier, unrecorded ascents can't be ruled out.

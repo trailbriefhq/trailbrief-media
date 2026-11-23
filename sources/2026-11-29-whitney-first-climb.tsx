@@ -1,12 +1,13 @@
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { BODY, C, COND, Grain, LogoMark, Rise, Slam, Topo, Vignette, clamp, useShake } from "../brand";
-import { Captions, Pt, Word, fr, partial, pointAt } from "./story-kit";
+import { Captions, PhotoScene, Pt, Word, fr, partial, pointAt } from "./story-kit";
 
 // "Mt. Whitney's first recorded climb" — narrated story (AI voice "Puck").
 // Facts and sources: videos/2026-11/2026-11-29-whitney-first-climb.facts.md in trailbrief-media.
-// The mountains are a stylized illustration (seen from the east: south on the left,
-// north on the right), not a survey drawing. No elevations are shown.
+// Real photos (public domain, trailbrief-media/library) carry the hook, 1864, Aug/Sept 1873 and
+// "today" beats; the stylized crest (seen from the east: south on the left, north on the right)
+// explains King's wrong mountain in 1871-73. No elevations are shown.
 
 export const WHITNEY_FRAMES = 1275; // 42.5 s
 
@@ -347,10 +348,36 @@ const Stamp: React.FC = () => {
   );
 };
 
+const FisherTag: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  if (frame < T.fisher || frame >= T.today) return null;
+  const s = spring({ frame: frame - T.fisher, fps, config: { damping: 13, stiffness: 220, mass: 0.6 } });
+  const strike = interpolate(frame, [T.stuck, T.stuck + 10], [0, 1], clamp);
+  const named = spring({ frame: frame - T.stuck - 8, fps, config: { damping: 14, stiffness: 200, mass: 0.6 } });
+  return (
+    <AbsoluteFill style={{ alignItems: "center", fontFamily: COND, fontWeight: 700, textTransform: "uppercase" }}>
+      {frame >= T.stuck + 8 ? (
+        <div style={{ position: "absolute", top: 880, fontSize: 120, color: C.gold, transform: `scale(${named.toFixed(3)})`, textShadow: "0 6px 30px rgba(8,2,12,0.8)" }}>
+          Mt. Whitney
+        </div>
+      ) : null}
+      <div style={{ position: "absolute", top: 1030, transform: `rotate(-3deg) scale(${s.toFixed(3)})` }}>
+        <div style={{ position: "relative", backgroundColor: C.gold, color: C.plum, padding: "8px 30px 2px", fontSize: 72, borderRadius: 10 }}>
+          Fisherman&apos;s Peak?
+          {strike > 0 ? (
+            <div style={{ position: "absolute", left: 14, top: "48%", height: 9, width: `${(strike * 92).toFixed(1)}%`, backgroundColor: C.plum, borderRadius: 5 }} />
+          ) : null}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const EndCard: React.FC = () => {
   const frame = useCurrentFrame();
   if (frame < T.today) return null;
-  const scrim = interpolate(frame, [T.today, T.today + 14], [0, 0.78], clamp);
+  const scrim = interpolate(frame, [T.today, T.today + 14, T.end - 6, T.end], [0, 0.45, 0.45, 0.92], clamp);
   const showEnd = frame >= T.end;
   return (
     <AbsoluteFill>
@@ -406,6 +433,16 @@ export const WhitneyStory: React.FC = () => {
       <Topo opacity={0.7} />
       <World />
       <Topo opacity={0.45} />
+      <PhotoScene src="whitney-from-mt-muir-1930.jpg" from={0} to={T.s1864} focus="27% 50%" zoom={[1.1, 1.0]}
+        credit="Photo: Mt. Whitney from near Mt. Muir, 1930 · NPS archive (public domain)" />
+      <PhotoScene src="whitney-dixon.jpg" from={T.s1864} to={T.s1871} focus="50% 50%" zoom={[1.08, 1.16]}
+        credit="Photo: Mt. Whitney · NPS archive, Joseph Dixon (public domain)" />
+      <PhotoScene src="whitney-from-south.jpg" from={T.aug} to={T.sept} framed zoom={[1.0, 1.08]}
+        credit="Photo: Mt. Whitney from the south · NPS archive, Bill Jones (public domain)" />
+      <PhotoScene src="whitney-summit-shelter-1929.jpg" from={T.sept} to={T.today} focus="64% 50%" zoom={[1.06, 1.14]}
+        credit="Photo: Whitney's summit hut (built 1909), 1929 · NPS archive, John Diehl (public domain)" />
+      <PhotoScene src="whitney-owens-valley-1963.jpg" from={T.today} to={WHITNEY_FRAMES} focus="66% 40%" zoom={[1.05, 1.12]}
+        credit="Photo: Mt. Whitney from Whitney Portal Road, 1963 · NPS archive, Richard McLaren (public domain)" />
       <Hook />
       <Head from={T.s1864} to={T.s1871} big="1864" sub="A state survey team names it" sub2="for Josiah Whitney, California's state geologist" sub2At={fr(10000)} />
       <Head from={T.s1871} to={T.s1873} big="1871" sub="Clarence King climbs it" sub2="…or so he thought" sub2At={T.thought} />
@@ -413,6 +450,7 @@ export const WhitneyStory: React.FC = () => {
       <Head from={T.aug} to={T.sept} big="Aug 18, 1873" bigSize={160} sub="Three local men beat King to the real summit" />
       <Head from={T.sept} to={T.today} big="Sept 1873" bigSize={170} sub="King finally makes the real summit" />
       <Stamp />
+      <FisherTag />
       <EndCard />
       <Captions words={WORDS} hideFrom={T.end} y={1270} />
       <Vignette />
