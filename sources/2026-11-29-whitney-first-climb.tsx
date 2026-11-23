@@ -86,23 +86,24 @@ const closed = (pts: Pt[]) =>
   pts.map((p, i) => `${i ? "L" : "M"}${p[0]} ${p[1]}`).join(" ") + " L2360 2400 L-200 2400 Z";
 const open = (pts: Pt[]) => pts.map((p, i) => `${i ? "L" : "M"}${p[0]} ${p[1]}`).join(" ");
 
+const KING_SEPT_ROUTE: Pt[] = [[1660, 1215], [1622, 1112], [1586, 1030], [1550, 955], [1512, 878], WHITNEY];
 const KING_ROUTE: Pt[] = [[455, 1215], [500, 1130], [535, 1070], [572, 1012], [600, 968], LANGLEY];
 const LOCALS_ROUTE: Pt[] = [[1335, 1215], [1372, 1110], [1398, 1030], [1425, 955], [1448, 878], WHITNEY];
 
 // Camera keyframes: [frame, centerX, centerY, scale]
 const CAM: [number, number, number, number][] = [
-  [0, 1080, 990, 0.6],
-  [T.s1864 - 10, 1080, 990, 0.68],
-  [T.s1864 + 22, 1470, 905, 1.0],
+  [0, 1080, 990, 0.62],
+  [T.s1864 - 4, 1080, 990, 0.66],
+  [T.s1864 + 30, 1470, 905, 1.0],
   [T.s1871 - 6, 1470, 905, 1.06],
-  [T.s1871 + 24, 640, 980, 1.12],
-  [T.s1873 - 6, 640, 980, 1.2],
-  [T.s1873 + 26, 1045, 935, 0.78],
+  [T.s1871 + 26, 640, 980, 1.12],
+  [T.thought + 10, 640, 980, 1.16],
+  [T.spotted - 24, 1045, 935, 0.78], // moves while the Langley photo is up
   [T.aug - 6, 1045, 935, 0.83],
-  [T.aug + 24, 1470, 900, 1.14],
-  [T.today - 6, 1470, 900, 1.22],
-  [T.today + 30, 1300, 800, 0.85],
-  [WHITNEY_FRAMES, 1300, 790, 0.82],
+  [T.aug + 20, 1440, 935, 0.9], // moves while the summit photo is up
+  [T.today - 6, 1440, 935, 0.97],
+  [T.today + 30, 1300, 820, 0.85],
+  [WHITNEY_FRAMES, 1300, 810, 0.82],
 ];
 const useCamera = () => {
   const f = useCurrentFrame();
@@ -148,6 +149,24 @@ const Label: React.FC<{ x: number; y: number; at: number; to?: number; color?: s
   );
 };
 
+const Crosshair: React.FC<{ at: Pt; from: number; to: number }> = ({ at, from, to }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  if (frame < from || frame >= to) return null;
+  const s = spring({ frame: frame - from, fps, config: { damping: 16, stiffness: 120, mass: 0.8 } });
+  const r = interpolate(s, [0, 1], [260, 70]);
+  const out = interpolate(frame, [to - 8, to], [1, 0], clamp);
+  return (
+    <g transform={`translate(${at[0]} ${at[1]})`} opacity={out} stroke={C.gold} fill="none" strokeWidth={4}>
+      <circle r={r} strokeOpacity={0.9} />
+      <circle r={r * 0.35} strokeOpacity={0.6} />
+      {[0, 90, 180, 270].map((deg) => (
+        <line key={deg} x1={0} y1={-(r + 40)} x2={0} y2={-(r * 0.55)} transform={`rotate(${deg})`} strokeLinecap="round" />
+      ))}
+    </g>
+  );
+};
+
 const Flag: React.FC<{ at: Pt; from: number; to?: number; color: string }> = ({ at, from, to = Infinity, color }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -172,6 +191,8 @@ const World: React.FC = () => {
   const localsRoute = partial(LOCALS_ROUTE, localsP);
   const glow = 0.55 + 0.1 * Math.sin(frame / 40);
   const strike = interpolate(frame, [T.stuck, T.stuck + 10], [0, 1], clamp);
+  const kingSeptP = interpolate(frame, [T.sept + 8, T.sept + 58], [0, 1], { ...clamp, easing: Easing.inOut(Easing.quad) });
+  const kingSept = partial(KING_SEPT_ROUTE, kingSeptP);
   return (
     <AbsoluteFill style={{ transform: camera, transformOrigin: "0 0" }}>
       <svg width={W} height={1920} viewBox={`0 0 ${W} 1920`} style={{ overflow: "visible" }}>
@@ -198,7 +219,8 @@ const World: React.FC = () => {
         <path d={open(NEAR)} fill="none" stroke={C.amber} strokeOpacity={0.25} strokeWidth={2} />
 
         {/* 1864: the peak gets its name */}
-        <Label x={WHITNEY[0]} y={WHITNEY[1] - 70} at={T.named} to={T.s1873} color={C.gold} size={52}>
+        <Crosshair at={WHITNEY} from={T.s1864 + 24} to={T.s1871} />
+        <Label x={WHITNEY[0]} y={WHITNEY[1] - 120} at={T.named} to={T.s1871 + 10} color={C.gold} size={58} sub="named from a distance, 1864">
           MT. WHITNEY
         </Label>
 
@@ -238,9 +260,18 @@ const World: React.FC = () => {
           ) : null,
         )}
         <Flag at={WHITNEY} from={T.fisher - 6} to={T.today} color={C.gold} />
-        {frame >= T.fisher && frame < T.today ? (
+        <Label x={WHITNEY[0] - 250} y={WHITNEY[1] + 210} at={T.sept + 4} to={T.today} color={C.gold} size={44} sub="three locals reach it first">
+          AUG 18, 1873
+        </Label>
+        {kingSept && frame < T.today ? (
+          <path d={kingSept} fill="none" stroke={C.cream} strokeWidth={6} strokeDasharray="16 12" strokeLinecap="round" />
+        ) : null}
+        <Label x={WHITNEY[0] + 250} y={WHITNEY[1] + 120} at={T.sept + 54} to={T.today} size={44} sub="about a month later">
+          KING · SEPT 1873
+        </Label>
+        {frame >= T.sept && frame < T.today ? (
           <g>
-            <Label x={WHITNEY[0]} y={WHITNEY[1] - 110} at={T.fisher} size={50}>
+            <Label x={WHITNEY[0]} y={WHITNEY[1] - 110} at={T.sept} size={50}>
               FISHERMAN&apos;S PEAK?
             </Label>
             {strike > 0 ? (
@@ -351,23 +382,14 @@ const Stamp: React.FC = () => {
 const FisherTag: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  if (frame < T.fisher || frame >= T.today) return null;
+  if (frame < T.fisher || frame >= T.sept + 6) return null;
   const s = spring({ frame: frame - T.fisher, fps, config: { damping: 13, stiffness: 220, mass: 0.6 } });
-  const strike = interpolate(frame, [T.stuck, T.stuck + 10], [0, 1], clamp);
-  const named = spring({ frame: frame - T.stuck - 8, fps, config: { damping: 14, stiffness: 200, mass: 0.6 } });
+  const out = interpolate(frame, [T.sept - 6, T.sept + 6], [1, 0], clamp);
   return (
-    <AbsoluteFill style={{ alignItems: "center", fontFamily: COND, fontWeight: 700, textTransform: "uppercase" }}>
-      {frame >= T.stuck + 8 ? (
-        <div style={{ position: "absolute", top: 880, fontSize: 120, color: C.gold, transform: `scale(${named.toFixed(3)})`, textShadow: "0 6px 30px rgba(8,2,12,0.8)" }}>
-          Mt. Whitney
-        </div>
-      ) : null}
-      <div style={{ position: "absolute", top: 1030, transform: `rotate(-3deg) scale(${s.toFixed(3)})` }}>
-        <div style={{ position: "relative", backgroundColor: C.gold, color: C.plum, padding: "8px 30px 2px", fontSize: 72, borderRadius: 10 }}>
-          Fisherman&apos;s Peak?
-          {strike > 0 ? (
-            <div style={{ position: "absolute", left: 14, top: "48%", height: 9, width: `${(strike * 92).toFixed(1)}%`, backgroundColor: C.plum, borderRadius: 5 }} />
-          ) : null}
+    <AbsoluteFill style={{ alignItems: "center", fontFamily: COND, fontWeight: 700, textTransform: "uppercase", opacity: out }}>
+      <div style={{ position: "absolute", top: 1060, transform: `rotate(-3deg) scale(${s.toFixed(3)})` }}>
+        <div style={{ backgroundColor: C.cream, color: C.plum, padding: "8px 30px 2px", fontSize: 72, borderRadius: 10, boxShadow: "0 12px 40px rgba(8,2,12,0.6)" }}>
+          &ldquo;Fisherman&apos;s Peak?&rdquo;
         </div>
       </div>
     </AbsoluteFill>
@@ -376,51 +398,30 @@ const FisherTag: React.FC = () => {
 
 const EndCard: React.FC = () => {
   const frame = useCurrentFrame();
-  if (frame < T.today) return null;
-  const scrim = interpolate(frame, [T.today, T.today + 14, T.end - 6, T.end], [0, 0.45, 0.45, 0.92], clamp);
-  const showEnd = frame >= T.end;
+  if (frame < T.end - 4) return null;
+  const scrim = interpolate(frame, [T.end - 4, T.end + 8], [0, 0.95], clamp);
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{ backgroundColor: C.plum, opacity: scrim }} />
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", paddingBottom: 260, textAlign: "center", fontFamily: COND, fontWeight: 700, textTransform: "uppercase" }}>
-        {!showEnd ? (
-          <>
-            <Slam delay={T.today} style={{ fontSize: 120, color: C.cream, lineHeight: 0.95 }}>
-              Today:
-            </Slam>
-            <Slam delay={T.today + 10} style={{ fontSize: 150, color: C.gold, lineHeight: 0.95 }}>
-              Permit required
-            </Slam>
-            <Rise delay={T.today + 18} dist={20} style={{ marginTop: 22, fontSize: 52, color: C.muted, letterSpacing: "0.08em" }}>
-              Mt. Whitney · year-round
-            </Rise>
-          </>
-        ) : (
-          <>
-            <Rise delay={T.end} dist={30}>
-              <LogoMark size={190} />
-            </Rise>
-            <Rise delay={T.end + 4} dist={24} style={{ marginTop: 34, fontSize: 70, color: C.cream, lineHeight: 1.02, width: 860 }}>
-              Permit lottery dates,
-              <br />
-              free:
-            </Rise>
-            <Slam delay={T.end + 12} from={1.6} style={{ marginTop: 28 }}>
-              <div style={{ backgroundColor: C.gold, color: C.plum, borderRadius: 999, padding: "18px 50px", fontSize: 84, letterSpacing: "0.03em", textTransform: "none" }}>
-                trailbrief.app
-              </div>
-            </Slam>
-            <Rise
-              delay={T.end + 20}
-              dist={10}
-              style={{ marginTop: 46, fontFamily: BODY, fontWeight: 500, fontSize: 28, textTransform: "none", color: C.muted, lineHeight: 1.4, width: 820 }}
-            >
-              Independent planning service. You apply yourself.
-              <br />
-              Not affiliated with Recreation.gov, USFS or NPS.
-            </Rise>
-          </>
-        )}
+        <Rise delay={T.end} dist={30}>
+          <LogoMark size={190} />
+        </Rise>
+        <Rise delay={T.end + 4} dist={24} style={{ marginTop: 34, fontSize: 70, color: C.cream, lineHeight: 1.02, width: 860 }}>
+          Permit lottery dates,
+          <br />
+          free:
+        </Rise>
+        <Slam delay={T.end + 12} from={1.6} style={{ marginTop: 28 }}>
+          <div style={{ backgroundColor: C.gold, color: C.plum, borderRadius: 999, padding: "18px 50px", fontSize: 84, letterSpacing: "0.03em", textTransform: "none" }}>
+            trailbrief.app
+          </div>
+        </Slam>
+        <Rise delay={T.end + 20} dist={10} style={{ marginTop: 46, fontFamily: BODY, fontWeight: 500, fontSize: 28, textTransform: "none", color: C.muted, lineHeight: 1.4, width: 820 }}>
+          Independent planning service. You apply yourself.
+          <br />
+          Not affiliated with Recreation.gov, USFS or NPS.
+        </Rise>
       </AbsoluteFill>
     </AbsoluteFill>
   );
@@ -433,22 +434,22 @@ export const WhitneyStory: React.FC = () => {
       <Topo opacity={0.7} />
       <World />
       <Topo opacity={0.45} />
-      <PhotoScene src="whitney-from-mt-muir-1930.jpg" from={0} to={T.s1864} focus="27% 50%" zoom={[1.1, 1.0]}
-        credit="Photo: Mt. Whitney from near Mt. Muir, 1930 · NPS archive (public domain)" />
-      <PhotoScene src="whitney-dixon.jpg" from={T.s1864} to={T.s1871} focus="50% 50%" zoom={[1.08, 1.16]}
-        credit="Photo: Mt. Whitney · NPS archive, Joseph Dixon (public domain)" />
-      <PhotoScene src="whitney-from-south.jpg" from={T.aug} to={T.sept} framed zoom={[1.0, 1.08]}
+      <PhotoScene src="trailbrief/whitney-east-crest.jpg" from={0} to={T.s1864 + 15} color focus="50% 50%" origin="48% 66%" zoom={[1.42, 1.52]}
+        credit="Photo: the Mt. Whitney crest from the east, 2023 · Trailbrief" />
+      <PhotoScene src="langley-from-whitney-1958.jpg" from={T.thought - 4} to={T.spotted - 2} framed
+        tag="King's peak" sub="Today: Mount Langley" subAt={T.s1873}
+        credit="Photo: Mount Langley seen from Mt. Whitney, 1958 · NPS archive, Bill Jones (public domain)" />
+      <PhotoScene src="whitney-from-south.jpg" from={T.aug} to={T.sept + 8} framed tag="The real summit"
         credit="Photo: Mt. Whitney from the south · NPS archive, Bill Jones (public domain)" />
-      <PhotoScene src="whitney-summit-shelter-1929.jpg" from={T.sept} to={T.today} focus="64% 50%" zoom={[1.06, 1.14]}
-        credit="Photo: Whitney's summit hut (built 1909), 1929 · NPS archive, John Diehl (public domain)" />
-      <PhotoScene src="whitney-owens-valley-1963.jpg" from={T.today} to={WHITNEY_FRAMES} focus="66% 40%" zoom={[1.05, 1.12]}
-        credit="Photo: Mt. Whitney from Whitney Portal Road, 1963 · NPS archive, Richard McLaren (public domain)" />
+      <PhotoScene src="trailbrief/whitney-summit-hut.jpg" from={T.today} to={T.end + 12} color framed tag="Whitney's summit"
+        credit="Photo: Whitney's summit hut (built 1909), 2023 · Trailbrief" />
       <Hook />
       <Head from={T.s1864} to={T.s1871} big="1864" sub="A state survey team names it" sub2="for Josiah Whitney, California's state geologist" sub2At={fr(10000)} />
       <Head from={T.s1871} to={T.s1873} big="1871" sub="Clarence King climbs it" sub2="…or so he thought" sub2At={T.thought} />
       <Head from={T.s1873} to={T.aug} big="July 1873" bigSize={170} sub="Two men ride up King's peak" sub2="…and spot a higher one to the north" sub2At={T.spotted} />
       <Head from={T.aug} to={T.sept} big="Aug 18, 1873" bigSize={160} sub="Three local men beat King to the real summit" />
       <Head from={T.sept} to={T.today} big="Sept 1873" bigSize={170} sub="King finally makes the real summit" />
+      <Head from={T.today} to={T.end} big="Today" sub="Permit required to stand here" sub2="Mt. Whitney · year-round" sub2At={T.today + 14} />
       <Stamp />
       <FisherTag />
       <EndCard />

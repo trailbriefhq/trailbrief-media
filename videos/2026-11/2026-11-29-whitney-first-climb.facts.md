@@ -1,6 +1,6 @@
 # Fact sheet: "Mt. Whitney's first recorded climb"
 
-- **Video:** `2026-11-29-whitney-first-climb.mp4` (42.5 s, 1080x1920, AI voice "Puck" via Speko, original music made in code). Version 2 (Nov 23): real public-domain photos added; narration unchanged
+- **Video:** `2026-11-29-whitney-first-climb.mp4` (42.5 s, 1080x1920, AI voice "Puck" via Speko, original music made in code). Version 3 (Nov 23): narration-matched photos (2 NPS, 2 of Bryce's), longer map sections, crossfades; narration unchanged
 - **Planned post:** Sun Nov 29, 2026, 7:00 PM ET. Instagram Reels, TikTok, YouTube Shorts
 - **Facts checked:** Nov 23, 2026
 - **AI label:** yes on all three platforms (realistic AI voice)
@@ -21,15 +21,14 @@
 | 10 | Today you need a permit to stand on top, year-round | Recreation.gov, Mt. Whitney lottery page: a wilderness permit is required year-round to visit Mt. Whitney. https://www.recreation.gov/permits/445860 |
 | 11 | Illustration: King's peak (Langley) is south of and lower than Whitney | Farquhar (higher peak "to the north"); the drawing is stylized and shows no elevations |
 
-## Photos on screen (all public domain; credit shown on screen; details in library/CREDITS.md)
-| Scene | Photo | On-screen credit (copied from the NPS page title) |
+## Photos on screen (v3, Nov 23): each one shows what the narration says at that moment
+| Line | Photo | On-screen label / credit |
 |---|---|---|
-| Hook | `whitney-from-mt-muir-1930.jpg` | Mt. Whitney from near Mt. Muir, 1930 · NPS archive |
-| 1864 | `whitney-dixon.jpg` | Mt. Whitney · NPS archive, Joseph Dixon |
-| Aug 18, 1873 | `whitney-from-south.jpg` (framed print) | Mt. Whitney from the south · NPS archive, Bill Jones |
-| Sept 1873 | `whitney-summit-shelter-1929.jpg` | Whitney's summit hut (built 1909), 1929 · NPS archive, John Diehl |
-| Today | `whitney-owens-valley-1963.jpg` | Mt. Whitney from Whitney Portal Road, 1963 · NPS archive, Richard McLaren |
-The 1871 and July 1873 scenes stay a drawn map (King's route, the higher peak to the north): an illustration, not a photo. Photo years are on screen so no photo reads as the year in the story.
+| "The first recorded climb of the highest peak in the Lower 48…" | `trailbrief/whitney-east-crest.jpg` (Bryce, Aug 2023; sky power lines removed) | Photo: the Mt. Whitney crest from the east, 2023 · Trailbrief |
+| "Or so King thought… two men rode up his peak" | `langley-from-whitney-1958.jpg` | KING'S PEAK / TODAY: MOUNT LANGLEY · Photo: Mount Langley seen from Mt. Whitney, 1958 · NPS archive, Bill Jones |
+| "Three local men beat him to the real summit… Fisherman's Peak" | `whitney-from-south.jpg` | THE REAL SUMMIT · Photo: Mt. Whitney from the south · NPS archive, Bill Jones |
+| "Today, you need a permit just to stand where they stood" | `trailbrief/whitney-summit-hut.jpg` (Bryce, Aug 2023) | WHITNEY'S SUMMIT · Photo: Whitney's summit hut (built 1909), 2023 · Trailbrief |
+The map (an illustration seen from the east, not a survey drawing) carries 1864 (crosshair: "named from a distance"), 1871 (King's route), July 1873 (the higher peak to the north, WRONG MOUNTAIN) and Sept 1873 (the locals' Aug 18 route, King's route about a month later, Fisherman's Peak crossed out). "Named from a distance" and "King's peak = Mount Langley" are in the independent check (claims 3, 7). "Whitney's summit hut built 1909": NPS photo title for asset 12dfbfdc.
 
 ## Wording choices (on purpose)
 - **"First recorded climb"**, not "first climb": earlier, unrecorded ascents can't be ruled out.

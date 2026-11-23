@@ -28,3 +28,17 @@ Rules for using these:
 - **The Wave** (Dec 10 video): BLM's Wave permit page has photos credited "Bob Wick, BLM" (federal employee work). The browser couldn't open recreation.gov's image server; the Library of Congress (Carol Highsmith) is behind a bot check, which we don't bypass.
 - **Half Dome cables** (Dec 6 video): the 1934 CCC cable work photos by Ralph H. Anderson in the NPS Yosemite archive.
 - Skipped on Nov 23 to save Bryce extra Save clicks: Whitney summit looking southwest (Bill Jones, 1958), Half Dome (Bryan Harry, 1967), a Tuolumne bear (Robert Lester, NPS, 2021).
+
+## Bryce's own photos (`photos/trailbrief/`): Mt. Whitney trip, Aug 5–6, 2023
+Taken by Bryce Bunting, owner of Trailbrief; free to use in Trailbrief videos. Credit on screen as "Photo: … · Trailbrief". Location data and all other metadata stripped before upload (public repo). Sent at 768–1024 px, so use them framed or with gentle zooms; ask Bryce for full-size originals if a video needs one full-screen. Labels: only what's certain. The hut is Whitney's summit hut; the rest are "on the Mt. Whitney trip", with no lake or peak names unless Bryce confirms them.
+| File | What it shows | Taken | Notes |
+|---|---|---|---|
+| `whitney-east-crest.jpg` | The Mt. Whitney crest from the east (Owens Valley side), moon over the ridge | 2023-08-05 | Three power lines removed from the sky (cosmetic) |
+| `whitney-summit-hut.jpg` | Whitney's summit hut (the stone shelter built 1909) | 2023-08-06 | |
+| `high-plateau-rocks.jpg` | High rocky plateau, Whitney trip | 2023-08-06 | Not confirmed as the summit: don't call it the summit |
+| `high-ridge.jpg` | Rugged granite ridge, Whitney trip | 2023-08-06 | |
+| `needles-sun.jpg` | Granite spires with the sun overhead | 2023-08-06 | |
+| `alpenglow-peak.jpg` | Peak lit pink at sunrise | 2023-08-06 | |
+| `trail-lake-needles.jpg` | Alpine lake below granite walls at dawn | 2023-08-06 | |
+| `granite-wall-lake.jpg` | Big granite face above a small lake | 2023-08-06 | |
+| `frozen-lake-cirque.jpg` | Partly frozen lake in a snowy cirque | 2023-08-06 | |
