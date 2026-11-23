@@ -21,10 +21,15 @@ Every video run reads this file before making anything, and **adds new feedback 
 - Library: `library/photos/` (NPS/USGS public domain) and `library/photos/trailbrief/` (Bryce's own photos from his Aug 2023 Whitney trip). Rights and notes: `library/CREDITS.md`.
 - If a video needs photos the library doesn't have, **ask Bryce before making it**. New downloads come in as one bundled file, never one Save prompt per photo.
 
+**Captions and hashtags**
+- Every post gets hashtags, **visible without tapping "more"**: Instagram: a one-line hook, then 5–8 hashtags on the next line, then the details. TikTok: a short caption with the hook and hashtags in the first lines. YouTube: "#shorts" in the title and 3 hashtags at the end of the description (YouTube shows those above the title).
+- Mix broad and specific tags: the place (#mountwhitney, #easternsierra), the activity (#hiking, #backpacking), the topic (#hikinghistory, #permits). No banned or bait tags (#fyp, #viral).
+
 **Process**
 - For the first few videos, Bryce approves each video before anything goes to Buffer.
 
 ## Feedback log
 - **2026-11-23, Whitney test v1** (all animation): "a little confused why there's no real photos and it's all AI" → use real photos.
 - **2026-11-23, Whitney v2** (5 NPS photos): "photos might be too much… when you change from photo to photo it's too clicky and glitches a little… spend some time on the diagram in between photos and make the photo choices a little better"; "I want the photos more related to what you're saying… they kinda just looked like nothing" → narration-matched photos with labels, longer map sections, crossfades.
+- **2026-11-23, Whitney drafts:** "these should have hashtags… I don't see hashtags on the Whitney vid" (they were at the end of a long caption, hidden behind "more"; YouTube had none) → hashtags near the top on Instagram/TikTok, 3 in the YouTube description.
 - **2026-11-23, general:** expects lots of feedback on the first few videos; wants it saved so future runs need him less → this file + Claude memory.
