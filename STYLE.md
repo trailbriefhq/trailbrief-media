@@ -28,8 +28,13 @@ Every video run reads this file before making anything, and **adds new feedback 
 **Process**
 - For the first few videos, Bryce approves each video before anything goes to Buffer.
 
+**From the numbers** (added by the Monday performance review; evidence in `PERFORMANCE.md`)
+- These are leanings from real results. Use them for choices that are Claude's call (voice vs. text, hook, length, pacing). They never override Bryce's feedback above or the rules in AUTOMATION.md.
+- *(none yet: the first videos get scored Mon Dec 7, and a pattern needs 3+ videos per group)*
+
 ## Feedback log
 - **2026-11-23, Whitney test v1** (all animation): "a little confused why there's no real photos and it's all AI" → use real photos.
 - **2026-11-23, Whitney v2** (5 NPS photos): "photos might be too much… when you change from photo to photo it's too clicky and glitches a little… spend some time on the diagram in between photos and make the photo choices a little better"; "I want the photos more related to what you're saying… they kinda just looked like nothing" → narration-matched photos with labels, longer map sections, crossfades.
 - **2026-11-23, Whitney drafts:** "these should have hashtags… I don't see hashtags on the Whitney vid" (they were at the end of a long caption, hidden behind "more"; YouTube had none) → hashtags near the top on Instagram/TikTok, 3 in the YouTube description. Then: "Instagram only allows 5 hashtags per post" → Instagram max 5, the most specific ones.
 - **2026-11-23, general:** expects lots of feedback on the first few videos; wants it saved so future runs need him less → this file + Claude memory.
+- **2026-11-23, performance:** asked whether video performance would be analyzed "so you can see which ones do well and which ones do bad so you can improve" → weekly Monday review (`PERFORMANCE.md`), findings feed "From the numbers" above.

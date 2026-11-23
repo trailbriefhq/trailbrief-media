@@ -1,0 +1,5 @@
+{
+  "note": "Weekly Buffer metrics snapshots, written by the Monday review (see PERFORMANCE.md). Platform numbers only: no sign-ups, sales or customer data in this public repo.",
+  "format": "videos[slug] = {posted, type, style, length_s, posts: {instagram|tiktok|youtube: {buffer_id, sent_at}}, snapshots: [{taken, age_days, instagram|tiktok|youtube: {every metric field Buffer returns, metricsUpdatedAt}}]}",
+  "videos": {}
+}
