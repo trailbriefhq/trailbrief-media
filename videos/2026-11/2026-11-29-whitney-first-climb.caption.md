@@ -2,7 +2,7 @@
 
 ## Instagram
 He climbed the wrong mountain. 🏔️ Mt. Whitney's first recorded climb.
-#mountwhitney #hiking #sierranevada #easternsierra #hikinghistory #backpacking #permits
+#mountwhitney #easternsierra #sierranevada #hikinghistory #hiking
 
 In 1871, Clarence King climbed what he thought was Mt. Whitney. It was the wrong mountain. In August 1873, three local men beat him to the real summit and tried to name it Fisherman's Peak.
 
