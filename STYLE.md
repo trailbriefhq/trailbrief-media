@@ -4,6 +4,8 @@ Every video run reads this file before making anything, and **adds new feedback 
 
 ## Rules so far
 **Content**
+- **Goal: entertaining videos that make people follow (Bryce, Nov 25).** A bigger audience is what brings memberships, so pick the story most hikers and climbers would stop scrolling for. Topics don't have to be permits or U.S. trips: Seven Summits, K2, Everest, famous climbs and mountain history are all in.
+- At least 4 posts a week (Bryce, Nov 25). If a week's calendar has fewer, add a story slot.
 - Most videos are informative or entertaining (gear, mountains, trails, history, permits explained), not ads. At least one video a week is about the website. On the others, the Trailbrief tag at the end is 1–2 seconds and optional.
 - Make it relevant to most hikers, not a narrow niche. Never salesy. (The deleted Wave ad was "too salesy, not applicable to a lot of people, and no sound".)
 - Every video has sound: an AI voice or original music, usually both.
@@ -19,7 +21,7 @@ Every video run reads this file before making anything, and **adds new feedback 
 
 **Photos**
 - Library: `library/photos/` (NPS/USGS public domain) and `library/photos/trailbrief/` (Bryce's own photos from his Aug 2023 Whitney trip). Rights and notes: `library/CREDITS.md`.
-- If a video needs photos the library doesn't have, **ask Bryce before making it**. New downloads come in as one bundled file, never one Save prompt per photo.
+- **Photos are optional; don't pick topics by what the library has (Bryce, Nov 25).** When a video needs new photos, search public-domain sources (NPS, USGS, NASA, Library of Congress) yourself. The cloud workspace can't download from those sites (tested Nov 25: npgallery, nps.gov, usgs.gov, wikimedia, loc.gov blocked; NASA's image server errored), so if a photo can't be fetched in the run, let the animation carry the video and list the photos you'd add for Bryce. New downloads through his Mac come as one bundled file, never one Save prompt per photo.
 
 **Captions and hashtags**
 - Every post gets hashtags, **visible without tapping "more"**: Instagram: a one-line hook, then **at most 5 hashtags** on the next line (Instagram's hard cap since Dec 2025, caption and comments combined), then the details. TikTok: a short caption with the hook and hashtags in the first lines. YouTube: "#shorts" in the title and 3 hashtags at the end of the description (YouTube shows those above the title).
@@ -37,4 +39,7 @@ Every video run reads this file before making anything, and **adds new feedback 
 - **2026-11-23, Whitney v2** (5 NPS photos): "photos might be too much… when you change from photo to photo it's too clicky and glitches a little… spend some time on the diagram in between photos and make the photo choices a little better"; "I want the photos more related to what you're saying… they kinda just looked like nothing" → narration-matched photos with labels, longer map sections, crossfades.
 - **2026-11-23, Whitney drafts:** "these should have hashtags… I don't see hashtags on the Whitney vid" (they were at the end of a long caption, hidden behind "more"; YouTube had none) → hashtags near the top on Instagram/TikTok, 3 in the YouTube description. Then: "Instagram only allows 5 hashtags per post" → Instagram max 5, the most specific ones.
 - **2026-11-23, general:** expects lots of feedback on the first few videos; wants it saved so future runs need him less → this file + Claude memory.
+- **2026-11-25, extra video:** "i need to post 4x a week so right here craft a story video" (no calendar slot on Tue Nov 24 or Wed Nov 25) → at least 4 posts a week; extra story slot made the same day (Grand Canyon $1 toll).
+- **2026-11-25, photos:** "dont need photos you can search for new photos if you need" → photos optional; search for public-domain ones when a video needs them; don't limit topics to the library.
+- **2026-11-25, direction:** "these need to be entertaining and make ppl follow, i think the memberships will come with a bigger audience, so its ok to make videos not related to the spacific things on the permit like a 7 summits video, k2, etc" → goal is follows; broad mountain/climbing stories are in (rule at the top of Content).
 - **2026-11-23, performance:** asked whether video performance would be analyzed "so you can see which ones do well and which ones do bad so you can improve" → weekly Monday review (`PERFORMANCE.md`), findings feed "From the numbers" above.
