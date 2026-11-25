@@ -29,6 +29,7 @@ Every video run reads this file before making anything, and **adds new feedback 
 
 **Process**
 - For the first few videos, Bryce approves each video before anything goes to Buffer.
+- **When Bryce approves in the run's chat ("post it"), schedule the posts in Buffer for the slot's time (not drafts)** so they go out without him opening Buffer (Bryce, Nov 25).
 
 **From the numbers** (added by the Monday performance review; evidence in `PERFORMANCE.md`)
 - These are leanings from real results. Use them for choices that are Claude's call (voice vs. text, hook, length, pacing). They never override Bryce's feedback above or the rules in AUTOMATION.md.
@@ -39,6 +40,7 @@ Every video run reads this file before making anything, and **adds new feedback 
 - **2026-11-23, Whitney v2** (5 NPS photos): "photos might be too much… when you change from photo to photo it's too clicky and glitches a little… spend some time on the diagram in between photos and make the photo choices a little better"; "I want the photos more related to what you're saying… they kinda just looked like nothing" → narration-matched photos with labels, longer map sections, crossfades.
 - **2026-11-23, Whitney drafts:** "these should have hashtags… I don't see hashtags on the Whitney vid" (they were at the end of a long caption, hidden behind "more"; YouTube had none) → hashtags near the top on Instagram/TikTok, 3 in the YouTube description. Then: "Instagram only allows 5 hashtags per post" → Instagram max 5, the most specific ones.
 - **2026-11-23, general:** expects lots of feedback on the first few videos; wants it saved so future runs need him less → this file + Claude memory.
+- **2026-11-25, posting:** approved the Grand Canyon video with "post now", then "schedule for 3pm", then "when i approve in here auto schudule it" → after approval in chat, schedule the posts (no drafts to post by hand). Default time stays 7 PM ET unless he names one.
 - **2026-11-25, extra video:** "i need to post 4x a week so right here craft a story video" (no calendar slot on Tue Nov 24 or Wed Nov 25) → at least 4 posts a week; extra story slot made the same day (Grand Canyon $1 toll).
 - **2026-11-25, photos:** "dont need photos you can search for new photos if you need" → photos optional; search for public-domain ones when a video needs them; don't limit topics to the library.
 - **2026-11-25, direction:** "these need to be entertaining and make ppl follow, i think the memberships will come with a bigger audience, so its ok to make videos not related to the spacific things on the permit like a 7 summits video, k2, etc" → goal is follows; broad mountain/climbing stories are in (rule at the top of Content).
