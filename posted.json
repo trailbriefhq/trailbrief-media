@@ -4,7 +4,8 @@
     "video": "videos/2026-11/2026-11-25-grand-canyon-toll.mp4",
     "buffer_post_ids": ["6b073628c06d6883dada32a3", "6b07362803e79bc5c6fb19c6", "6b073629b1da0f86e49808cf"],
     "drafted": "2026-11-25",
-    "note": "extra story slot (not in calendar.json), Bryce approved in chat"
+    "scheduled": "2026-11-25T15:00:00-05:00",
+    "note": "extra story slot (not in calendar.json); Bryce approved in chat and asked for 3 PM ET, so these three are scheduled (not drafts)"
   },
   "2026-11-29": {
     "slug": "whitney-first-climb",
