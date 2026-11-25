@@ -30,6 +30,7 @@ Every video run reads this file before making anything, and **adds new feedback 
 **Process**
 - For the first few videos, Bryce approves each video before anything goes to Buffer.
 - **When Bryce approves in the run's chat ("post it"), schedule the posts in Buffer for the slot's time (not drafts)** so they go out without him opening Buffer (Bryce, Nov 25).
+- **Post time: 11:00 AM ET on the slot's date (Bryce, Nov 25), not 7 PM.** calendar.json and AUTOMATION.md still say 19:00; this wins. If he approves after 11 AM, schedule it 15 minutes after his approval and say so.
 
 **From the numbers** (added by the Monday performance review; evidence in `PERFORMANCE.md`)
 - These are leanings from real results. Use them for choices that are Claude's call (voice vs. text, hook, length, pacing). They never override Bryce's feedback above or the rules in AUTOMATION.md.
@@ -40,6 +41,7 @@ Every video run reads this file before making anything, and **adds new feedback 
 - **2026-11-23, Whitney v2** (5 NPS photos): "photos might be too much… when you change from photo to photo it's too clicky and glitches a little… spend some time on the diagram in between photos and make the photo choices a little better"; "I want the photos more related to what you're saying… they kinda just looked like nothing" → narration-matched photos with labels, longer map sections, crossfades.
 - **2026-11-23, Whitney drafts:** "these should have hashtags… I don't see hashtags on the Whitney vid" (they were at the end of a long caption, hidden behind "more"; YouTube had none) → hashtags near the top on Instagram/TikTok, 3 in the YouTube description. Then: "Instagram only allows 5 hashtags per post" → Instagram max 5, the most specific ones.
 - **2026-11-23, general:** expects lots of feedback on the first few videos; wants it saved so future runs need him less → this file + Claude memory.
+- **2026-11-25, post time:** "i thing 7pm is too late i think it needs to be 11am fo al tasks" → posts go out at 11:00 AM ET.
 - **2026-11-25, posting:** approved the Grand Canyon video with "post now", then "schedule for 3pm", then "when i approve in here auto schudule it" → after approval in chat, schedule the posts (no drafts to post by hand). Default time stays 7 PM ET unless he names one.
 - **2026-11-25, extra video:** "i need to post 4x a week so right here craft a story video" (no calendar slot on Tue Nov 24 or Wed Nov 25) → at least 4 posts a week; extra story slot made the same day (Grand Canyon $1 toll).
 - **2026-11-25, photos:** "dont need photos you can search for new photos if you need" → photos optional; search for public-domain ones when a video needs them; don't limit topics to the library.
