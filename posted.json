@@ -2,15 +2,36 @@
   "2026-11-25": {
     "slug": "grand-canyon-toll",
     "video": "videos/2026-11/2026-11-25-grand-canyon-toll.mp4",
-    "buffer_post_ids": ["6b073628c06d6883dada32a3", "6b07362803e79bc5c6fb19c6", "6b073629b1da0f86e49808cf"],
+    "buffer_post_ids": [
+      "6b073628c06d6883dada32a3",
+      "6b07362803e79bc5c6fb19c6",
+      "6b073629b1da0f86e49808cf"
+    ],
     "drafted": "2026-11-25",
     "scheduled": "2026-11-25T15:00:00-05:00",
     "note": "extra story slot (not in calendar.json); Bryce approved in chat and asked for 3 PM ET, so these three are scheduled (not drafts)"
   },
+  "2026-11-26": {
+    "slug": "two-lotteries-closing",
+    "video": "videos/2026-11/2026-11-26-two-lotteries-closing-voice.mp4",
+    "buffer_post_ids": [
+      "6b084774b2044ab9dfaf889e",
+      "6b0847751e13bd67eef37610",
+      "6b084775ee9d307b372df8d7"
+    ],
+    "drafted": "2026-11-26",
+    "scheduled": "2026-11-26T11:00:00-05:00",
+    "ai_label": true,
+    "note": "Bryce chose the voice version in chat ('Ok so the voice one post it'); scheduled (not drafts) on Instagram, TikTok, YouTube with isAiGenerated true. Text-only version (clean music) kept as 2026-11-26-two-lotteries-closing.mp4, not posted."
+  },
   "2026-11-29": {
     "slug": "whitney-first-climb",
     "video": "videos/2026-11/2026-11-29-whitney-first-climb.mp4",
-    "buffer_post_ids": ["6b04c28207fee37ee60a7946", "6b04c283c0a1a00006ea53ce", "6b04c28318db0405bdaddd57"],
+    "buffer_post_ids": [
+      "6b04c28207fee37ee60a7946",
+      "6b04c283c0a1a00006ea53ce",
+      "6b04c28318db0405bdaddd57"
+    ],
     "drafted": "2026-11-23",
     "scheduled": "2026-11-29T19:00:00-05:00"
   }
