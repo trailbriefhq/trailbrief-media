@@ -1,7 +1,7 @@
 # Fact sheet: "Mt. Whitney's first recorded climb"
 
-- **Video:** `2026-11-29-whitney-first-climb.mp4` (42.5 s, 1080x1920, AI voice "Puck" via Speko, original music made in code). Version 3 (Nov 23): narration-matched photos (2 NPS, 2 of Bryce's), longer map sections, crossfades; narration unchanged
-- **Planned post:** Sun Nov 29, 2026, 7:00 PM ET. Instagram Reels, TikTok, YouTube Shorts
+- **Video:** `2026-11-29-whitney-first-climb.mp4` (42.5 s, 1080x1920, AI voice "Puck" via Speko, original music made in code). Version 4 (Nov 25, approved by Bryce): the opening (first ~7 s) is now a 3D flyover of the Mt. Whitney crest from the east, built from USGS 3DEP elevation data (public domain; ground colors and lighting simulated; no elevation shown). Version 3 (Nov 23): narration-matched photos (2 NPS, 2 of Bryce's), longer map sections, crossfades; narration unchanged
+- **Planned post:** Sun Nov 29, 2026, 11:00 AM ET (moved from 7 PM on Nov 25, Bryce). Instagram Reels, TikTok, YouTube Shorts
 - **Facts checked:** Nov 23, 2026
 - **AI label:** yes on all three platforms (realistic AI voice)
 
@@ -24,7 +24,7 @@
 ## Photos on screen (v3, Nov 23): each one shows what the narration says at that moment
 | Line | Photo | On-screen label / credit |
 |---|---|---|
-| "The first recorded climb of the highest peak in the Lower 48…" | `trailbrief/whitney-east-crest.jpg` (Bryce, Aug 2023; sky power lines removed) | Photo: the Mt. Whitney crest from the east, 2023 · Trailbrief |
+| "The first recorded climb of the highest peak in the Lower 48…" | 3D terrain flyover (USGS 3DEP elevation, colors simulated); replaces the 2023 crest photo from v4 | Terrain: USGS 3DEP elevation data · colors simulated |
 | "Or so King thought… two men rode up his peak" | `langley-from-whitney-1958.jpg` | KING'S PEAK / TODAY: MOUNT LANGLEY · Photo: Mount Langley seen from Mt. Whitney, 1958 · NPS archive, Bill Jones |
 | "Three local men beat him to the real summit… Fisherman's Peak" | `whitney-from-south.jpg` | THE REAL SUMMIT · Photo: Mt. Whitney from the south · NPS archive, Bill Jones |
 | "Today, you need a permit just to stand where they stood" | `trailbrief/whitney-summit-hut.jpg` (Bryce, Aug 2023) | WHITNEY'S SUMMIT · Photo: Whitney's summit hut (built 1909), 2023 · Trailbrief |
