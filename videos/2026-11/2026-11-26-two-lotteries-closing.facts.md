@@ -1,5 +1,13 @@
 # Fact sheet: "2 permit lotteries close by Tuesday" (The Wave + Grand Canyon backcountry)
 
+**Two versions (Nov 26, after Bryce's preview reply):**
+- `2026-11-26-two-lotteries-closing-voice.mp4`: 37.0 s, AI voice "Puck" (Speko, synthesis e19b2adb, transcript matched the script word for word) + the same on-screen text + clean music ducked under the voice. **AI label on all three platforms.** Captions: `-voice.caption.md`.
+- `2026-11-26-two-lotteries-closing.mp4`: 40.8 s, text + music, remixed with the clean music variant (no shaker hiss, no noise swell on scene changes: the "scratching" Bryce heard). No AI label.
+
+**Voiceover (raw script):** "Two permit lotteries close by Tuesday. First, The Wave, in Arizona. For March hikes, the last day to apply is Monday, November thirtieth. Six dollars to apply, up to three dates, and results come by email December first. Second, Grand Canyon backcountry. For trips starting in April, the lottery closes Tuesday, December first, at five PM Arizona time. Ten dollars to apply, and winners get a time slot to book. Heads up: after the August flash flood, Bright Angel and Cottonwood campgrounds are closed, and not in the lotteries. Free permit calendar and reminders at trailbrief dot app." Every line restates claims 1–16 below. "Arizona time" = MST: NPS FAQ says Grand Canyon is on Arizona Mountain Standard Time and Arizona doesn't observe daylight saving time (and DST is over by Dec 1 anyway).
+
+**Round 3 independent check (voiceover only, a third agent that never saw these sources):** lines 1–5 VERIFIED (BLM FAQ, Recreation.gov 274309, NPS backcountry permit page). Line 6: closures VERIFIED (NPS Key Hiking Messages, Nov 13; NPS release Sept 3); it did not open Recreation.gov 4675337, so it couldn't confirm "not in the lotteries". That part was VERIFIED by rounds 1 and 2 on Recreation.gov 4675337 ("Permits for these campgrounds … will NOT be available through permit lotteries until further notice"), so the line stands. It suggested "MST" over "Arizona time" (kept: same thing, see above; the screen shows "5 PM MST"). No page text addressed to an AI.
+
 - **Video:** `2026-11-26-two-lotteries-closing.mp4` (40.8 s, 1080x1920, on-screen text + original music made in code, no voice). Calendar slot Thu Nov 26, 2026 (`two-lotteries-closing`, type permit, style text)
 - **Planned post:** Thu Nov 26, 2026, 11:00 AM ET. Instagram Reels, TikTok, YouTube Shorts
 - **Facts checked:** Nov 26, 2026. Every permit date was read on the official page the same day the video posts (rule: no permit dates unless re-checked that day)

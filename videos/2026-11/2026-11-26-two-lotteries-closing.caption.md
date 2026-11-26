@@ -1,6 +1,6 @@
 # Captions: 2 permit lotteries close by Tuesday (post Thu Nov 26, 2026, 11 AM ET)
 
-Text + original music, no voice: no AI label needed.
+Text + original music (clean variant, no noise hiss), no voice: no AI label needed. The voice version has its own file: `2026-11-26-two-lotteries-closing-voice.caption.md`.
 
 ## Instagram
 2 permit lotteries close by Tuesday: The Wave and Grand Canyon backcountry. ⏳
