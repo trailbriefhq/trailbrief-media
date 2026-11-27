@@ -9,56 +9,57 @@ import { Captions, Pt, Word, fr } from "./story-kit";
 // in the cloud run, so a stylized skyline (an illustration, not a survey drawing, no elevations), a quote panel
 // (Everest's own words, RGS Proceedings vol. I, 1857) and a timeline carry the story. Safe zone: x 70–930, y 180–1420.
 
-export const EVEREST_NAME_FRAMES = 1236; // 41.2 s
+export const EVEREST_NAME_FRAMES = 1186; // 39.5 s
 
-// Raw-voice word timings from Speko audio_transcribe (synthesis 6d5a41b0, Nov 27 2026; transcript matched the
-// script word for word). Display text follows the facts file: "Peak XV" (the survey's own label) and "Qomolangma"
+// Raw-voice word timings from Speko audio_transcribe. Hook (Bryce, Nov 27: shorter) = synthesis 0c550806, spliced at
+// a silence onto synthesis 6d5a41b0 from "Surveyors…" (later words shifted -1800 ms); both transcripts matched the
+// script word for word. Display text follows the facts file: "Peak XV" (the survey's own label) and "Qomolangma"
 // (Library of Congress spelling; the voice says "Cho-mo-lang-ma", which is how that pinyin spelling is read).
 export const WORDS: Word[] = [
-  ["Mount", 0, 300], ["Everest", 300, 800], ["is", 900, 1000], ["named", 1000, 1300], ["after", 1300, 1600], ["a", 1600, 1650],
-  ["man", 1650, 2000], ["who", 2000, 2100], ["was", 2100, 2500], ["pleased", 2600, 3000], ["by", 3000, 3200], ["the", 3200, 3300],
-  ["honor,", 3300, 3700], ["but", 3800, 4100], ["raised", 4200, 4600], ["objections", 4600, 5200], ["to", 5200, 5300], ["it.", 5300, 5400],
-  ["Surveyors", 6200, 6600], ["in", 6600, 6700], ["India", 6700, 7200], ["logged", 7200, 7600], ["it", 7600, 7700], ["as", 7700, 7900],
-  ["Peak", 7900, 8300], ["XV.", 8300, 9100],
-  ["In", 9200, 9300], ["the", 9300, 9400], ["1850s,", 9400, 10200], ["their", 10200, 10400], ["calculations", 10400, 11200],
-  ["showed", 11200, 11500], ["it", 11500, 11700], ["was", 11700, 11900], ["the", 11900, 12100], ["highest", 12100, 12800],
-  ["peak", 12800, 13100], ["on", 13100, 13300], ["Earth.", 13300, 13600],
-  ["In", 14300, 14400], ["1856,", 14400, 15600], ["Surveyor", 15600, 16000], ["General", 16000, 16500], ["Andrew", 16500, 16900],
-  ["Waugh", 16900, 17300], ["said", 17300, 17600], ["he", 17600, 17700], ["could", 17700, 17800], ["find", 17800, 18100],
-  ["no", 18100, 18300], ["local", 18300, 18700], ["name,", 18700, 19100], ["so", 19200, 19400], ["he", 19400, 19500],
-  ["named", 19500, 19800], ["it", 19800, 19900], ["after", 19900, 20200], ["his", 20200, 20400], ["predecessor,", 20400, 21200],
-  ["George", 21300, 21700], ["Everest.", 21700, 22300],
-  ["In", 22400, 22600], ["1857,", 22600, 23800], ["Everest", 23800, 24200], ["told", 24200, 24500], ["the", 24500, 24600],
-  ["Royal", 24600, 25000], ["Geographical", 25000, 25700], ["Society", 25700, 26300], ["there", 26800, 26900], ["were", 26900, 27000],
-  ["objections.", 27000, 27900], ["People", 28100, 28400], ["in", 28400, 28600], ["India", 28600, 28900], ["couldn't", 28900, 29200],
-  ["pronounce", 29200, 29700], ["it,", 29700, 29900], ["and", 29900, 30100], ["it", 30100, 30200], ["couldn't", 30200, 30400],
-  ["be", 30400, 30500], ["written", 30500, 30800], ["in", 30800, 30900], ["Persian", 30900, 31500], ["or", 31500, 31600],
-  ["Hindi.", 31600, 32100],
-  ["Yet", 32700, 32900], ["an", 32900, 33100], ["18th-century", 33100, 34000], ["map", 34000, 34300], ["had", 34300, 34500],
-  ["already", 34500, 34900], ["recorded", 34900, 35400], ["its", 35400, 35500], ["Tibetan", 35500, 35900], ["name,", 35900, 36300],
-  ["Qomolangma.", 36700, 37600],
-  ["In", 37900, 38000], ["Nepali,", 38000, 38500], ["it's", 38500, 38800], ["Sagarmatha.", 38800, 39700],
-  ["More", 40500, 40600], ["mountain", 40600, 40900], ["stories", 40900, 41300], ["at", 41300, 41500], ["trailbrief.app", 41500, 42500],
+  ["Why", 0, 300], ["is", 300, 400], ["it", 400, 500], ["called", 500, 900], ["Everest?", 900, 1600],
+  ["Even", 2300, 2600], ["Everest", 2600, 3000], ["had", 3000, 3200], ["doubts.", 3200, 3700],
+  ["Surveyors", 4400, 4800], ["in", 4800, 4900], ["India", 4900, 5400], ["logged", 5400, 5800], ["it", 5800, 5900],
+  ["as", 5900, 6100], ["Peak", 6100, 6500], ["XV.", 6500, 7300], ["In", 7400, 7500], ["the", 7500, 7600],
+  ["1850s,", 7600, 8400], ["their", 8400, 8600], ["calculations", 8600, 9400], ["showed", 9400, 9700],
+  ["it", 9700, 9900], ["was", 9900, 10100], ["the", 10100, 10300], ["highest", 10300, 11000], ["peak", 11000, 11300],
+  ["on", 11300, 11500], ["Earth.", 11500, 11800], ["In", 12500, 12600], ["1856,", 12600, 13800],
+  ["Surveyor", 13800, 14200], ["General", 14200, 14700], ["Andrew", 14700, 15100], ["Waugh", 15100, 15500],
+  ["said", 15500, 15800], ["he", 15800, 15900], ["could", 15900, 16000], ["find", 16000, 16300], ["no", 16300, 16500],
+  ["local", 16500, 16900], ["name,", 16900, 17300], ["so", 17400, 17600], ["he", 17600, 17700],
+  ["named", 17700, 18000], ["it", 18000, 18100], ["after", 18100, 18400], ["his", 18400, 18600],
+  ["predecessor,", 18600, 19400], ["George", 19500, 19900], ["Everest.", 19900, 20500], ["In", 20600, 20800],
+  ["1857,", 20800, 22000], ["Everest", 22000, 22400], ["told", 22400, 22700], ["the", 22700, 22800],
+  ["Royal", 22800, 23200], ["Geographical", 23200, 23900], ["Society", 23900, 24500], ["there", 25000, 25100],
+  ["were", 25100, 25200], ["objections.", 25200, 26100], ["People", 26300, 26600], ["in", 26600, 26800],
+  ["India", 26800, 27100], ["couldn't", 27100, 27400], ["pronounce", 27400, 27900], ["it,", 27900, 28100],
+  ["and", 28100, 28300], ["it", 28300, 28400], ["couldn't", 28400, 28600], ["be", 28600, 28700],
+  ["written", 28700, 29000], ["in", 29000, 29100], ["Persian", 29100, 29700], ["or", 29700, 29800],
+  ["Hindi.", 29800, 30300], ["Yet", 30900, 31100], ["an", 31100, 31300], ["18th-century", 31300, 32200],
+  ["map", 32200, 32500], ["had", 32500, 32700], ["already", 32700, 33100], ["recorded", 33100, 33600],
+  ["its", 33600, 33700], ["Tibetan", 33700, 34100], ["name,", 34100, 34500], ["Qomolangma.", 34900, 35800],
+  ["In", 36100, 36200], ["Nepali,", 36200, 36700], ["it's", 36700, 37000], ["Sagarmatha.", 37000, 37900],
+  ["More", 38700, 38800], ["mountain", 38800, 39100], ["stories", 39100, 39500], ["at", 39500, 39700],
+  ["trailbrief.app", 39700, 40700],
 ];
 
 // Story beats (frames)
 const T = {
-  sub: fr(2000), // "…who was pleased by the honor, but raised objections to it"
-  peak: fr(6200), // "Surveyors in India…"
-  peakWord: fr(7900), // "Peak Fifteen"
-  s1850: fr(9200), // "In the 1850s…"
-  highest: fr(12100), // "…the highest peak on Earth"
-  waugh: fr(14300), // "In 1856, Surveyor General Andrew Waugh…"
-  noname: fr(17300), // "…said he could find no local name"
-  george: fr(21300), // "George Everest"
-  s1857: fr(22400), // "In 1857, Everest told the Royal Geographical Society…"
-  objections: fr(26800), // "…there were objections"
-  pron: fr(28100), // "People in India couldn't pronounce it"
-  written: fr(30100), // "…and it couldn't be written in Persian or Hindi"
-  map: fr(32700), // "Yet an 18th-century map…"
-  qomo: fr(36700), // the Tibetan name
-  sagar: fr(38800), // "Sagarmatha"
-  end: fr(40500), // "More mountain stories at trailbrief.app"
+  sub: fr(2300), // "Even Everest had doubts."
+  peak: fr(4400), // "Surveyors in India…"
+  peakWord: fr(6100), // "Peak Fifteen"
+  s1850: fr(7400), // "In the 1850s…"
+  highest: fr(10300), // "…the highest peak on Earth"
+  waugh: fr(12500), // "In 1856, Surveyor General Andrew Waugh…"
+  noname: fr(15500), // "…said he could find no local name"
+  george: fr(19500), // "George Everest"
+  s1857: fr(20600), // "In 1857, Everest told the Royal Geographical Society…"
+  objections: fr(25000), // "…there were objections"
+  pron: fr(26300), // "People in India couldn't pronounce it"
+  written: fr(28300), // "…and it couldn't be written in Persian or Hindi"
+  map: fr(30900), // "Yet an 18th-century map…"
+  qomo: fr(34900), // the Tibetan name
+  sagar: fr(37000), // "Sagarmatha"
+  end: fr(38700), // "More mountain stories at trailbrief.app"
 };
 const FADE = 15;
 const win = (frame: number, from: number, to: number, f = FADE) =>
@@ -280,10 +281,9 @@ const Hook: React.FC = () => {
       <Slam delay={6} style={{ fontSize: 128, lineHeight: 0.92, color: C.gold }}>
         Why &ldquo;Everest&rdquo;?
       </Slam>
-      <Rise delay={T.sub} dist={22} style={{ marginTop: 26, fontSize: 58, lineHeight: 1.05, color: C.cream, width: 860 }}>
-        Named after a man who was
-        <br />pleased by the honor, but
-        <br />raised objections to it
+      <Rise delay={T.sub} dist={22} style={{ marginTop: 26, fontSize: 76, lineHeight: 1.02, color: C.cream, width: 860 }}>
+        Even Everest
+        <br />had doubts
       </Rise>
     </AbsoluteFill>
   );
