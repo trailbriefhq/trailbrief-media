@@ -24,6 +24,20 @@
     "ai_label": true,
     "note": "Bryce chose the voice version in chat ('Ok so the voice one post it'); scheduled (not drafts) on Instagram, TikTok, YouTube with isAiGenerated true. Text-only version (clean music) kept as 2026-11-26-two-lotteries-closing.mp4, not posted."
   },
+  "2026-11-27": {
+    "slug": "everest-name",
+    "video": "videos/2026-11/2026-11-27-everest-name.mp4",
+    "buffer_post_ids": [
+      "6b09a1a332c212878fe0209f",
+      "6b09a1a318c8c6749bf7363f",
+      "6b09a1a434d224b14a951c14"
+    ],
+    "drafted": "2026-11-27",
+    "scheduled": "2026-11-27T11:00:00-05:00",
+    "ai_label": true,
+    "cover_ms": 3500,
+    "note": "Bryce approved v2 in chat ('Perfect post it') after asking for a shorter hook; scheduled (not drafts) on Instagram, TikTok, YouTube with isAiGenerated true; read back: status scheduled, dueAt 16:00Z."
+  },
   "2026-11-29": {
     "slug": "whitney-first-climb",
     "video": "videos/2026-11/2026-11-29-whitney-first-climb.mp4",
