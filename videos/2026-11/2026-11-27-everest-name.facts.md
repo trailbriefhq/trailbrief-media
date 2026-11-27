@@ -1,0 +1,49 @@
+# Fact sheet: "Why is it called Mount Everest?" (everest-name)
+
+- **Video:** `2026-11-27-everest-name.mp4` (41.2 s, 1080x1920, AI voice "Puck" via Speko, original music made in code with `story_music_clean.py`, seed 331). Style: voice + on-screen text + music (STYLE.md default).
+- **Planned post:** Fri Nov 27, 2026, 11:00 AM ET. Instagram Reels, TikTok, YouTube Shorts
+- **Facts checked:** Nov 27, 2026 (three independent checks, below)
+- **AI label:** yes on all three platforms (realistic AI voice)
+- **Photos:** none. The library has no Everest photo and new public-domain photos can't be fetched from the cloud run, so a stylized skyline (an illustration: no elevations, not a survey drawing), a quote panel and a timeline carry the video.
+
+## Final voiceover
+"Mount Everest is named after a man who was pleased by the honor, but raised objections to it. Surveyors in India logged it as Peak Fifteen. In the 1850s, their calculations showed it was the highest peak on Earth. In 1856, Surveyor General Andrew Waugh said he could find no local name, so he named it after his predecessor, George Everest. In 1857, Everest told the Royal Geographical Society there were objections: people in India couldn't pronounce it, and it couldn't be written in Persian or Hindi. Yet an eighteenth-century map had already recorded its Tibetan name: Cho-mo-lang-ma. In Nepali, it's Sagarmatha. More mountain stories at trailbrief dot app."
+(Speko take 6d5a41b0; the transcript matched the script word for word.)
+
+## Every claim, with its source
+
+| # | Said or shown | Source (official or primary) |
+|---|---|---|
+| 1 | Everest was pleased by the honor but raised objections to it | **Proceedings of the Royal Geographical Society of London, vol. I (1857), p. 350**, Twelfth Meeting, May 11, 1857 (Sir R. Murchison in the chair), remarks of "Colonel Everest, F.R.G.S.": the decision of Colonel Waugh "he certainly never contemplated"; "the proceeding was very grateful to him personally" (1850s English: very pleasing to him); "Yet he must confess there were objections to his name being given to this mountain, which did not strike everybody." Scan/OCR: https://archive.org/stream/proceedingsofroy01lond/proceedingsofroy01lond_djvu.txt |
+| 2 | The objections: people in India couldn't pronounce it; it couldn't be written in Persian or Hindi. On screen (verbatim fragments, labelled "as reported in the Proceedings"): "…not pronounceable by a native of India", "…could not be written in either Persian or Hindi" | Same page: "One was, that his name was not pronounceable by a native of India. The name could not be written in either Persian or Hindi," (p. 351 continues) "and the natives could not pronounce it." The Proceedings report his words in the third person, hence the on-screen label |
+| 3 | Surveyors in India logged it as Peak XV ("its label in the survey's books") | Waugh's letter, Proceedings vol. I p. 345: "the peak designated XV in the list in the Office of the Surveyor-General of India"; table p. 346-347: "Mont Everest, or Himalaya Peak XV". B. L. Gulatee (Director, Survey of India, Himalayan Journal 17, 1952, published with the Surveyor-General's courtesy): "entered in angle books as Peak XV". https://www.himalayanclub.org/hj/17/14/mount-everest-its-name-and-height/ . Library of Congress: "what was then called 'Peak XV'" |
+| 4 | In the 1850s their calculations showed it was the highest peak on Earth | Library of Congress, Geography & Map Division: calculated 1852 to be the world's highest peak; "In 1856 … declared to be the world's tallest mountain". https://blogs.loc.gov/maps/2018/03/extremities-of-the-earth-the-highest-point-from-sea-level/ . Gulatee (Survey of India): computations sufficiently advanced in 1852. Waugh's letter (1856): "final values for the peak designated XV", "most probably it is the highest in the whole world" |
+| 5 | In 1856 Surveyor General Andrew Waugh said he could find no local name | Waugh's letter "dated Dehra, March 1st, 1856", Proceedings vol. I pp. 345-346: "a mountain, most probably the highest in the world, without any local name that we can discover" |
+| 6 | …so he named it after his predecessor, George Everest ("Waugh's predecessor as Surveyor General") | Same letter: "my respected chief and predecessor, Colonel Geo. Everest"; "I have determined to name this noble peak of the Himalayas 'Mont Everest.'" Survey of India, Ex Surveyor Generals: "Sir George Everest 1830–1843", "Maj Gen Andrew Scott Waugh 1843–1861". https://surveyofindia.gov.in/pages/ex-surveyor-generals |
+| 7 | In 1857 Everest told the Royal Geographical Society | Proceedings vol. I: "Twelfth Meeting, May 11th, 1857" |
+| 8 | An 18th-century map had already recorded its Tibetan name ("1700s") | Library of Congress (blog above): "The first known map that names the mountain was made in 1721, where it was labeled as 'Qomolangma' in the Atlas of the Whole Imperial Territory" (Huang yu quan lan tu, compiled 1708–1717). LOC catalog record for the Kangxi atlas: https://www.loc.gov/item/74650033 |
+| 9 | Its Tibetan name is Qomolangma (voice: "Cho-mo-lang-ma") | Library of Congress: known "in Tibetan as Qomolangma" |
+| 10 | In Nepali it's Sagarmatha | Library of Congress: "known in Nepali as Sagarmatha"; Government of Nepal, Sagarmatha National Park: "Sagarmatha is a Nepali word…" https://snp.gov.np/about-us ; DNPWC https://dnpwc.gov.np/en/conservation-area-detail/72 |
+| 11 | "The world's highest peak" (hook kicker) | Library of Congress: "the highest point on earth from sea level" |
+
+## Wording choices (on purpose)
+- **"Pleased by the honor, but raised objections"**, not "didn't want it" or "objected": in the same remarks he called the naming "very grateful to him personally" and never asked for it to be withdrawn. (Check 3 flagged "raised objections" alone as misleading.)
+- **"In the 1850s"**, not "In 1852": official and primary sources put the result in 1852 (LOC, Survey of India), "final values" in Waugh's 1856 letter, and an RGS teachers' factsheet says the height was first measured in March 1854.
+- **No credit to Radhanath Sikdar alone:** LOC and the Royal Society credit his calculations, but the Survey of India's own 1952 account says he "cannot be regarded as the discoverer" (team effort). An earlier cut credited him; removed.
+- **"An 18th-century map" / "1700s"**, not "1721": LOC says 1721, other accounts give 1715, 1717-18 or 1719 for editions of the same Qing atlas. The atlas wrote the name in Chinese/Manchu transcription, so the video says it "recorded its Tibetan name", not that it printed the spelling "Qomolangma". Some historians dispute which peak that label meant; LOC states it as Everest.
+- **"Qomolangma"** on screen is the Library of Congress spelling (official Chinese romanization); the voice reads it "Cho-mo-lang-ma".
+- **"George Everest"**, no "Sir": in 1856-57 Waugh and the Proceedings call him "Colonel".
+- **No elevations, no naming year:** sources give different heights (29,002 ft in Waugh's 1856 table vs. today's figures) and different adoption years (1856 letter, 1865 RGS adoption).
+- **Skyline, survey stations and sightlines are an illustration**, not a map; the timeline says "not to scale" on screen.
+- End card: "Trailbrief is an independent trip-planning service. Not affiliated with Recreation.gov, NPS, USFS or BLM." ("You apply yourself" dropped: it's about U.S. permits and could suggest we handle Everest permits. Check 2.)
+
+## Independent checks (separate agents that never saw these sources)
+1. **Check 1 (first script, Nov 27, early):** no claim wrong; three fixes: Sikdar credit disputed by the Survey of India; "no single local name" unsupported (→ "said he could find no local name"); the 1721 map didn't print "Qomolangma" (→ "showed its Tibetan name"); "tallest" → "highest".
+2. **Check 2 (second script):** all core claims VERIFIED (Survey of India list, Waugh's 1856 letter on archive.org, LOC, Royal Society, Government of Nepal). Flags: 1852 vs 1854/1856 disagreement; 1721 date and map identification debated; end card's U.S. disclaimer could mislead. → "In the 1850s", "18th-century map", end card changed. This check also found the 1857 Proceedings scan, which made Everest's own objection usable (it had been cut from the first scripts because no primary source could be opened).
+3. **Check 3 (final facts, read the 1857 Proceedings scan):** every date, name, page and quoted fragment VERIFIED: meeting May 11, 1857; p. 350 for both fragments ("not pronounceable by a native of India"; "could not be written in either Persian or Hindi,", page break after "Hindi,"); Waugh's letter dated Dehra, March 1st, 1856; "Himalaya Peak XV"; Survey of India tenures; LOC and Government of Nepal for the names. Fixes applied: hook said only "raised objections" (misleading without "very grateful to him personally") → "pleased by the honor, but raised objections"; quote panel implied direct speech → "as reported in the Proceedings"; 1721 → "18th-century".
+4. **Check 4 (the three reworded lines only):** "18th-century map recorded its Tibetan name" VERIFIED (LOC). It could not open the Proceedings scan in its time limit, so it marked lines 1-2 "not verified" (no contradiction found; secondary sources paraphrase "the native of India", the primary reads "a native of India", as read in check 3 and in the maker's own read of the same scan).
+
+## Photos I'd add (not used; rights not checked in this run)
+- A NASA astronaut photo of Everest from the International Space Station or a NASA Earth Observatory image (NASA imagery is usually public domain; check each page). The cloud run can't reach NASA's image servers.
+- A scan of the 1857 Proceedings page itself (p. 350) from the archive.org copy, as an on-screen document shot.
+- A Library of Congress scan of the Kangxi atlas sheet (https://www.loc.gov/item/74650033), if its rights statement allows reuse.
