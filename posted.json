@@ -38,6 +38,20 @@
     "cover_ms": 3500,
     "note": "Bryce approved v2 in chat ('Perfect post it') after asking for a shorter hook; scheduled (not drafts) on Instagram, TikTok, YouTube with isAiGenerated true; read back: status scheduled, dueAt 16:00Z."
   },
+  "2026-11-28": {
+    "slug": "angels-landing-chains",
+    "video": "videos/2026-11/2026-11-28-angels-landing-chains.mp4",
+    "buffer_post_ids": [
+      "6b0af60a4ebef2b6d4e77b4a",
+      "6b0af60b79d323bf64913963",
+      "6b0af60cb9b186a7f7b6f511"
+    ],
+    "drafted": "2026-11-28",
+    "scheduled": "2026-11-28T11:00:00-05:00",
+    "ai_label": true,
+    "cover_ms": 4500,
+    "note": "Bryce approved in chat ('Post'); scheduled (not drafts) on Instagram, TikTok, YouTube with isAiGenerated true; read back: status scheduled, dueAt 16:00Z, thumbnailOffset 4500 on Instagram and TikTok."
+  },
   "2026-11-29": {
     "slug": "whitney-first-climb",
     "video": "videos/2026-11/2026-11-29-whitney-first-climb.mp4",
